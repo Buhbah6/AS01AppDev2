@@ -2,15 +2,21 @@ package Q2;
 
 import java.util.Date;
 
-/**
- * @author Anthony Nadeau
- */
-public class Visit {
-   protected Customer customer;
-   private Date date;
-   private double serviceExpense;
-   private double productExpense;
+// --------------------------------------------------------------------
+// Assignment 1
+// Written by: Anthony Nadeau - 2058983
+// For Application Development 2 (Mobile) - Winter 2022
+// --------------------------------------------------------------------
 
+public class Visit {
+    // Instance Variables
+    protected Customer customer;
+    private Date date;
+    private double serviceExpense;
+    private double productExpense;
+
+    // CONSTRUCTORS //
+    
     public Visit(String name, Date date) {
         this.customer = new Customer(name);
         this.date = date;
@@ -23,6 +29,8 @@ public class Visit {
         this.productExpense = productExpense;
     }
 
+    // GETTERS AND SETTERS //
+    
     public String getName() {
         return customer.getName();
     }
@@ -47,6 +55,7 @@ public class Visit {
         return serviceExpense + productExpense;
     }
 
+    // Overriden toString
     @Override
     public String toString() {
         return "Visit{" + "customer=" + customer + ", date=" + date + ", serviceExpense=" + serviceExpense + ", productExpense=" + productExpense + '}';

@@ -1,9 +1,13 @@
 package Q2;
 
-/**
- * @author Anthony Nadeau
- */
+// --------------------------------------------------------------------
+// Assignment 1
+// Written by: Anthony Nadeau - 2058983
+// For Application Development 2 (Mobile) - Winter 2022
+// --------------------------------------------------------------------
+
 public class DiscountRate {
+    // Static variables
     private static double serviceDiscountPremium = 0.2;
     private static double serviceDiscountGold = 0.15;
     private static double serviceDiscountSilver = 0.1;
@@ -11,6 +15,11 @@ public class DiscountRate {
     private static double productDiscountGold = 0.1;
     private static double productDiscountSilver = 0.1;
     
+    /**
+     * Determines service discount rate based on type of membership
+     * @param type type of membership
+     * @return corresponding service discount rate
+     */
     public static double getServiceDiscountRate(String type) {
         switch (type) {
             case "Premium":
@@ -24,6 +33,11 @@ public class DiscountRate {
         }
     }
     
+    /**
+     * Determines product discount rate based on type of membership
+     * @param type type of membership
+     * @return corresponding product discount rate
+     */
     public static double getProductDiscountRate(String type) {
         switch (type) {
             case "Premium":

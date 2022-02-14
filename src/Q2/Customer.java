@@ -1,14 +1,18 @@
 package Q2;
 
-/**
- *
- * @author Anthony Nadeau
- */
+// --------------------------------------------------------------------
+// Assignment 1
+// Written by: Anthony Nadeau - 2058983
+// For Application Development 2 (Mobile) - Winter 2022
+// --------------------------------------------------------------------
+
 public class Customer {
-    private String name;
+    private String name; 
     private boolean member = false;
     private String memberType;
 
+    // CONSTRUCTORS //
+    
     public Customer(String name) {
         this.name = name;
         memberType = "non";
@@ -18,6 +22,8 @@ public class Customer {
         this.name = name;
         this.memberType = memberType;
     }
+    
+    // GETTERS AND SETTERS //
     
     public String getName() {
         return name;
@@ -39,6 +45,7 @@ public class Customer {
         this.memberType = memberType;
     }
 
+    // Overriden toString
     @Override
     public String toString() {
         return "Customer{" + "name=" + name + ", member=" + member + ", memberType=" + memberType + '}';
